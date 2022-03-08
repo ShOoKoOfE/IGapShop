@@ -51,7 +51,6 @@ kapt {
 dependencies {
     implementation(project(Modules.core))
     implementation(project(Modules.dataSource))
-    implementation(project(Modules.domain))
     implementation(project(Modules.interactors))
 
     implementation(project(Modules.ui_login))

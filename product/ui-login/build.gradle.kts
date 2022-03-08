@@ -3,7 +3,6 @@ apply {
 }
 dependencies {
     "implementation"(project(Modules.core))
-    "implementation"(project(Modules.components))
     "implementation"(project(Modules.dataSource))
     "implementation"(project(Modules.interactors))
     "implementation"(SqlDelight.androidDriver)
