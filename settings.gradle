@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "IGapShop"
+include ':app'
+include ':components'
+include ':constants'
+include ':core'
+include ':product'
+include ':product:datasource'
+include ':product:datasource-test'
+include ':product:domain'
+include ':product:interactors'
+include ':product:ui-login'
+include ':product:productList'
+include ':product:ui-productList'
+include ':datasource'

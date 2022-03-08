@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="IGapShop.app" target="11" />
+      <module name="IGapShop.buildSrc" target="11" />
+      <module name="IGapShop.components" target="11" />
+      <module name="IGapShop.constants" target="1.8" />
+      <module name="IGapShop.core" target="1.8" />
+      <module name="IGapShop.datasource" target="11" />
+      <module name="IGapShop.product.datasource-test" target="1.8" />
+      <module name="IGapShop.product.domain" target="1.8" />
+      <module name="IGapShop.product.interactors" target="1.8" />
+      <module name="IGapShop.product.ui-login" target="11" />
+      <module name="IGapShop.product.ui-productList" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
