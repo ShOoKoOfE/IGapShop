@@ -21,7 +21,6 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun DefaultScreenUI(
-    navController: NavController,
     progressBarState: ProgressBarState = ProgressBarState.Idle,
     uiComponentState: UIComponentState = UIComponentState.Hide,
     content: @Composable () -> Unit,
@@ -52,7 +51,6 @@ fun DefaultScreenUI(
         scaffoldState = scaffoldState,
         drawerContent = {
             AppDrawer(
-                navController = navController,
                 currentScreen = Screen.ProductList,
                 closeDrawerAction = {
                     coroutineScope.launch {

@@ -24,12 +24,10 @@ import com.adeli.ui_login.ui.LoginViewModel
 @ExperimentalAnimationApi
 @Composable
 fun Login(
-    navController: NavController,
     state: LoginState,
     viewModel: LoginViewModel
 ){
     DefaultScreenUI(
-        navController = navController,
         progressBarState = state.progressBarState,
         uiComponentState = state.uiComponentState
     ) {

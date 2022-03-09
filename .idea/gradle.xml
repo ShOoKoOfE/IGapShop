@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/constants" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/datasource" />
+            <option value="$PROJECT_DIR$/datasource_test" />
             <option value="$PROJECT_DIR$/product" />
             <option value="$PROJECT_DIR$/product/datasource" />
             <option value="$PROJECT_DIR$/product/datasource-test" />

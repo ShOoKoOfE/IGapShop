@@ -18,6 +18,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
+        test.java.srcDirs += 'src/test/java'
+        test.java.srcDirs += 'src/sharedTest/java'
+        androidTest.java.srcDirs += 'src/sharedTest/java'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -86,7 +93,12 @@ dependencies {
     androidTestImplementation(AndroidXTest.runner)
     androidTestImplementation(ComposeTest.uiTestJunit4)
     debugImplementation(ComposeTest.uiTestManifest)
-    androidTestImplementation(HiltTest.hiltAndroidTesting)
-    kaptAndroidTest(Hilt.compiler)
+
+    testImplementation(HiltTest.hiltTesting)
+    kaptTest(HiltTest.hiltCompilerTesting)
+    
+    testImplementation(RetrofitTest.mockWebServer)
+    testImplementation(AndroidXTest.archAndroidx)
+    androidTestImplementation(AndroidXTest.archAndroidx)
     androidTestImplementation(Junit.junit4)
 }

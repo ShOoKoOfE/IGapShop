@@ -89,7 +89,6 @@ fun NavGraphBuilder.addProductList(
     ){
         val viewModel: ProductListViewModel = hiltViewModel()
         ProductList(
-            navController = navController,
             state = viewModel.state.value,
             imageLoader = imageLoader,
         )
@@ -126,7 +125,6 @@ fun NavGraphBuilder.addLogin(
     ){
         val viewModel: LoginViewModel = hiltViewModel()
         Login(
-            navController = navController,
             state = viewModel.state.value,
             viewModel = viewModel
         )

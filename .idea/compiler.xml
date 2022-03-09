@@ -6,7 +6,6 @@
       <module name="IGapShop.buildSrc" target="11" />
       <module name="IGapShop.core" target="1.8" />
       <module name="IGapShop.datasource" target="11" />
-      <module name="IGapShop.product.datasource-test" target="1.8" />
       <module name="IGapShop.product.interactors" target="1.8" />
       <module name="IGapShop.product.ui-login" target="11" />
       <module name="IGapShop.product.ui-productList" target="11" />

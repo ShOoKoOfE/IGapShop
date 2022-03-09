@@ -11,5 +11,7 @@ object AndroidX {
 
 object AndroidXTest {
     private const val version = "1.3.0"
+    private const val archVersion = "2.1.0"
     const val runner = "androidx.test:runner:$version"
+    const val archAndroidx = "androidx.arch.core:core-testing:$archVersion"
 }

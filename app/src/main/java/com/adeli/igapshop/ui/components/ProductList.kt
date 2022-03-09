@@ -22,12 +22,10 @@ import com.adeli.ui_productlist.ui.ProductListState
 @ExperimentalAnimationApi
 @Composable
 fun ProductList(
-    navController: NavController,
     state: ProductListState,
     imageLoader: ImageLoader,
 ){
     DefaultScreenUI(
-        navController = navController,
         progressBarState = state.progressBarState,
     ) {
         Box(
