@@ -15,14 +15,7 @@ android {
         versionCode Android.versionCode
         versionName Android.versionName
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/java'
-        test.java.srcDirs += 'src/test/java'
-        test.java.srcDirs += 'src/sharedTest/java'
-        androidTest.java.srcDirs += 'src/sharedTest/java'
+        testInstrumentationRunner "com.adeli.igapshop.CustomTestRunner"
     }
 
     buildTypes {
@@ -49,10 +42,6 @@ android {
         exclude("META-INF/AL2.0")
         exclude("META-INF/LGPL2.1")
     }
-}
-
-kapt {
-    correctErrorTypes true
 }
 
 dependencies {
@@ -88,17 +77,21 @@ dependencies {
     implementation(Retrofit.okHttp)
     implementation(Retrofit.httpLoggingInterceptor)
 
-    implementation(SqlDelight.androidDriver)
-
     androidTestImplementation(AndroidXTest.runner)
     androidTestImplementation(ComposeTest.uiTestJunit4)
     debugImplementation(ComposeTest.uiTestManifest)
 
     testImplementation(HiltTest.hiltTesting)
     kaptTest(HiltTest.hiltCompilerTesting)
+    androidTestImplementation(HiltTest.hiltTesting)
+    kaptAndroidTest(HiltTest.hiltCompilerTesting)
     
-    testImplementation(RetrofitTest.mockWebServer)
+    implementation(RetrofitTest.mockWebServer)
     testImplementation(AndroidXTest.archAndroidx)
     androidTestImplementation(AndroidXTest.archAndroidx)
     androidTestImplementation(Junit.junit4)
+}
+
+kapt {
+    correctErrorTypes = true
 }

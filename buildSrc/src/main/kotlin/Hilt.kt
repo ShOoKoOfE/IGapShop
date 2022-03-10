@@ -5,7 +5,7 @@ object Hilt {
 }
 
 object HiltTest {
-    private const val hiltTestVersion = "2.38.1"
+    private const val hiltTestVersion = "2.41"
     const val hiltTesting = "com.google.dagger:hilt-android-testing:$hiltTestVersion"
     const val hiltCompilerTesting = "com.google.dagger:hilt-android-compiler:$hiltTestVersion"
 }

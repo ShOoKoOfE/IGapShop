@@ -28,7 +28,7 @@ class ProductListTest {
 
     private val context = InstrumentationRegistry.getInstrumentation().targetContext
     private val imageLoader: ImageLoader = FakeImageLoader.build(context)
-    private val productData: List<Product> = Gson().fromJson(mockResponseFileReader("data/ValidData.json"),object : TypeToken<List<Product>>() {}.type)
+    private val productData: List<Product> = Gson().fromJson(mockResponseFileReader("data/ProductData.json"),object : TypeToken<List<Product>>() {}.type)
 
     @Test
     fun areProductsShown() {

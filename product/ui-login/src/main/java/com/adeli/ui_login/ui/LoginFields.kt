@@ -16,9 +16,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import com.adeli.ui_login.ui.test.TAG_Email
+import com.adeli.ui_login.ui.test.TAG_LOGIN
+import com.adeli.ui_login.ui.test.TAG_PASSWORD
 
 @SuppressLint("UnrememberedMutableState")
 @Composable
@@ -40,6 +44,7 @@ fun LoginFields(
         Text("Please login")
 
         OutlinedTextField(
+            modifier = Modifier.testTag(TAG_Email),
             value = email,
             placeholder = { Text(text = "user@email.com") },
             label = { Text(text = "email") },
@@ -49,6 +54,7 @@ fun LoginFields(
         )
 
         OutlinedTextField(
+            modifier = Modifier.testTag(TAG_PASSWORD),
             value = password,
             placeholder = { Text(text = "password") },
             label = { Text(text = "password") },
@@ -58,7 +64,9 @@ fun LoginFields(
             keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() })
         )
 
-        Button(onClick = {
+        Button(
+            modifier = Modifier.testTag(TAG_LOGIN),
+            onClick = {
             onLoginClick(email)
             focusManager.clearFocus()
         }) {
