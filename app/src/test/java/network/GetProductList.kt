@@ -56,7 +56,7 @@ class GetProductList {
         val mockResponse : List<Product> = Gson().fromJson(
             ProductServiceResponseMock.build(
                 type = ProductServiceResponseType.GoodData
-            ).body?.readUtf8(), object : TypeToken<List<Product>>() {}.type)
+            ).getBody()?.readUtf8(), object : TypeToken<List<Product>>() {}.type)
         Assert.assertEquals(mockResponse[0].images, actualResponse?.get(0)?.images)
     }
 }
