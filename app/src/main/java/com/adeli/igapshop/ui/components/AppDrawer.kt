@@ -4,7 +4,10 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.Divider
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Menu
@@ -17,7 +20,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.adeli.igapshop.ui.navigation.Screen
-import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
 @Composable
 private fun AppDrawerHeader() {
@@ -95,10 +97,10 @@ private fun ScreenNavigationButton(
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AppDrawer(
+  navController: NavController,
   currentScreen: Screen.ProductList,
   closeDrawerAction: () -> Unit
 ) {
-  val navController = rememberAnimatedNavController()
   Column(modifier = Modifier.fillMaxSize()) {
     AppDrawerHeader()
     Divider(color = MaterialTheme.colors.onSurface.copy(alpha = .2f))

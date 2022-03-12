@@ -25,11 +25,13 @@ import com.adeli.ui_login.ui.LoginViewModel
 @Composable
 fun Login(
     state: LoginState,
-    viewModel: LoginViewModel
+    viewModel: LoginViewModel,
+    navController: NavController,
 ){
     DefaultScreenUI(
         progressBarState = state.progressBarState,
-        uiComponentState = state.uiComponentState
+        uiComponentState = state.uiComponentState,
+        navController = navController
     ) {
         var email by remember { mutableStateOf("") }
         var password by remember { mutableStateOf("") }

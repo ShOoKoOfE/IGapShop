@@ -24,9 +24,11 @@ import com.adeli.ui_productlist.ui.ProductListState
 fun ProductList(
     state: ProductListState,
     imageLoader: ImageLoader,
+    navController: NavController,
 ){
     DefaultScreenUI(
         progressBarState = state.progressBarState,
+        navController = navController
     ) {
         Box(
             modifier = Modifier

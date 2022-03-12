@@ -3,7 +3,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'io.realm.kotlin'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion Android.compileSdk
@@ -32,6 +32,7 @@ android {
     }
     buildFeatures {
         compose true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion Compose.composeVersion
@@ -40,6 +41,9 @@ android {
     packagingOptions {
         exclude("META-INF/AL2.0")
         exclude("META-INF/LGPL2.1")
+    }
+    realm {
+        syncEnabled = true
     }
 }
 
