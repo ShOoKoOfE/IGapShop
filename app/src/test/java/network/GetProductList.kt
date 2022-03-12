@@ -8,6 +8,12 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Assert
 import org.junit.Test
 
+/**
+ * 1. getProducts_success (Retrieve a list of products)
+ * 2. getProducts_emptyList (Retrieve an empty list of products)
+ * 3. fetch details and check response success returned
+ */
+
 class GetProductList {
     private lateinit var repository : Repository
 

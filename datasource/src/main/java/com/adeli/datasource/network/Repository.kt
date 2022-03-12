@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
-
 @ActivityRetainedScoped
 class Repository @Inject constructor(
     private val productServiceImpl: ProductServiceImpl

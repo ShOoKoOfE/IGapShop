@@ -20,6 +20,10 @@ import com.google.gson.reflect.TypeToken
 import org.junit.Rule
 import org.junit.Test
 
+/**
+ * isolation test for ProductList screen.
+ */
+
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 class ProductListTest {

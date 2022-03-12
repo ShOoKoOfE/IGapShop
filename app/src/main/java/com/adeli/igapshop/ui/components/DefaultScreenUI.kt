@@ -19,6 +19,10 @@ import com.adeli.ui_login.ui.GenericDialog
 import com.adeli.ui_login.ui.LoginViewModel
 import kotlinx.coroutines.launch
 
+/**
+ * @param content: The content of the UI.
+ */
+
 @Composable
 fun DefaultScreenUI(
     progressBarState: ProgressBarState = ProgressBarState.Idle,

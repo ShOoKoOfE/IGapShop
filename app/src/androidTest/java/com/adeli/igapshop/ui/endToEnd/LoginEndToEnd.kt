@@ -26,6 +26,14 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+/**
+ * NOTE: These tests will fail with Accompanist Animations for navigation transitions.
+ * To get them to pass you can't use 'import com.google.accompanist.navigation.animation.composable'
+ *
+ * End to end tests for the ProductList Screen.
+ * Basically I tested all the things a user could do in this screen.
+ */
+
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @HiltAndroidTest
