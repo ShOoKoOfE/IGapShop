@@ -92,6 +92,8 @@ dependencies {
     testImplementation(AndroidXTest.archAndroidx)
     androidTestImplementation(AndroidXTest.archAndroidx)
     androidTestImplementation(Junit.junit4)
+
+    androidTestImplementation "androidx.navigation:navigation-testing:2.3.5"
 }
 
 kapt {

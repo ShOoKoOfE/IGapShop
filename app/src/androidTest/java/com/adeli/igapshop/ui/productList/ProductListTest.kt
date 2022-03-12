@@ -6,6 +6,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.navigation.NavController
 import androidx.test.platform.app.InstrumentationRegistry
 import coil.ImageLoader
 import com.adeli.datasource.network.model.Product
@@ -30,6 +31,7 @@ class ProductListTest {
     private val imageLoader: ImageLoader = FakeImageLoader.build(context)
     private val productData: List<Product> = Gson().fromJson(mockResponseFileReader("data/ProductData.json"),object : TypeToken<List<Product>>() {}.type)
 
+
     @Test
     fun areProductsShown() {
         composeTestRule.setContent {
@@ -42,6 +44,7 @@ class ProductListTest {
                 ProductList(
                     state = state,
                     imageLoader = imageLoader,
+                    navController = NavController(context)
                 )
             }
         }
