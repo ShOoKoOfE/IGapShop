@@ -12,6 +12,7 @@ import com.adeli.core.utils.Logger
 import com.adeli.datasource.cache.CustomerCache
 import com.adeli.datasource.network.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -42,11 +43,13 @@ class LoginViewModel @Inject constructor(
             }
         }
     }
-    private fun getCustomer()=viewModelScope.launch {
-        repository.getCustomerList().collect(){values ->
-            customerCache.insertCustomer(customers = values.data?: listOf())
+    private fun getCustomer() = viewModelScope.launch {
+        repository.getCustomerList().collect(){ values ->
             state.value = state.value.copy(customers = values.data?: listOf())
             state.value = state.value.copy(progressBarState = ProgressBarState.Idle)
+            GlobalScope.launch{
+                customerCache.insertCustomer(state.value.customers).collect(){}
+            }
         }
     }
 
